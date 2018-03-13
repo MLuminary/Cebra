@@ -5,6 +5,15 @@ import MyClass from 'views/MyClass'
 import ChatSquare from 'views/ChatSquare'
 import PersonalCenter from 'views/PersonalCenter'
 
+import Spending from 'views/modules/Spending'
+import Material from 'views/modules/Material'
+import Vote from 'views/modules/Vote'
+import Schedule from 'views/modules/Schedule'
+import Trends from 'views/modules/Trends'
+import Tyfon from 'views/modules/Tyfon'
+import Timetable from 'views/modules/Timetable'
+import Ipa from 'views/modules/Ipa'
+
 Vue.use(Router)
 
 export default new Router({
@@ -16,7 +25,41 @@ export default new Router({
     },
     {
       path: '/class',
-      component: MyClass
+      component: MyClass,
+      children: [
+        {
+          path: 'spending',
+          component: Spending
+        },
+        {
+          path: 'material',
+          component: Material
+        },
+        {
+          path: 'vote',
+          component: Vote
+        },
+        {
+          path: 'schedule',
+          component: Schedule
+        },
+        {
+          path: 'trends',
+          component: Trends
+        },
+        {
+          path: 'tyfon',
+          component: Tyfon
+        },
+        {
+          path: 'timetable',
+          component: Timetable
+        },
+        {
+          path: 'ipa',
+          component: Ipa
+        }
+      ]
     },
     {
       path: '/square',

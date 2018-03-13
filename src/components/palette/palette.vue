@@ -1,29 +1,29 @@
 <!-- 功能栏模块 -->
 <template>
   <div class="palette">
-    <router-link class="pal-item spending" to="/spending">
+    <router-link class="pal-item spending" to="/class/spending">
       <span>开销</span>
     </router-link>
-    <router-link class="pal-item vote" to="/vote">
+    <router-link class="pal-item vote" to="/class/vote">
+      <span>投票</span>
+    </router-link>
+    <router-link class="pal-item material" to="/class/material">
       <span>资料</span>
     </router-link>
-    <router-link class="pal-item material" to="/material">
+    <router-link class="pal-item schedule" to="/class/schedule">
       <span>日程</span>
     </router-link>
-    <router-link class="pal-item schedule" to="/schedule">
+    <router-link class="pal-item trends" to="/class/trends">
       <span>动态</span>
     </router-link>
-    <router-link class="pal-item trends" to="/trends">
+    <router-link class="pal-item timetable" to="/class/timetable">
       <span>课表</span>
     </router-link>
-    <router-link class="pal-item timetable" to="/timetable">
+    <router-link class="pal-item tyfon" to="/class/tyfon">
       <span>喇叭</span>
     </router-link>
-    <router-link class="pal-item tyfon" to="/tyfon">
+    <router-link class="pal-item ipa" to="/class/ipa">
       <span>通讯录</span>
-    </router-link>
-    <router-link class="pal-item ipa" to="/ipa">
-      <span>投票</span>
     </router-link>
   </div>
 </template>
