@@ -1,15 +1,30 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+
+import MyClass from 'views/MyClass'
+import ChatSquare from 'views/ChatSquare'
+import PersonalCenter from 'views/PersonalCenter'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      redirect: '/class'
+    },
+    {
+      path: '/class',
+      component: MyClass
+    },
+    {
+      path: '/square',
+      component: ChatSquare
+    },
+    {
+      path: '/personal',
+      component: PersonalCenter
     }
   ]
 })
