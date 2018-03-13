@@ -25,7 +25,7 @@ export default {
 @import '~common/stylus/variable';
 
 .class-info {
-  margin-bottom: 20px;
+  margin: 10px 0 20px;
   padding: 0 10px;
 
   .class-name {
