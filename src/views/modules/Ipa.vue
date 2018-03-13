@@ -1,13 +1,26 @@
-<!-- 通讯录 -->
+<!-- 开销 -->
 <template>
-  <div>
-    通讯录
-  </div>
+  <func-page :title="title">
+    <div>
+      通讯录
+    </div>
+  </func-page>
 </template>
 
 <script>
-export default {}
+import FuncPage from 'base/funcPage/funcPage'
 
+export default {
+  data () {
+    return {
+      title: '班级通讯录'
+    }
+  },
+  components: {
+    FuncPage
+  }
+}
 </script>
 <style scoped>
+
 </style>

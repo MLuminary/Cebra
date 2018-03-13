@@ -64,6 +64,7 @@ export default {
     text-decoration: none;
     width: 25%;
     flex-direction: column;
+    user-select: none;
 
     span {
       color: $color-font-d;
@@ -71,7 +72,7 @@ export default {
     }
 
     img {
-      width: 40%;
+      width: 35%;
       margin-bottom: 10px;
     }
   }

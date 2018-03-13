@@ -1,13 +1,26 @@
-<!-- 投票 -->
+<!-- 开销 -->
 <template>
-  <div>
-    投票
-  </div>
+  <func-page :title="title">
+    <div>
+      投票
+    </div>
+  </func-page>
 </template>
 
 <script>
-export default {}
+import FuncPage from 'base/funcPage/funcPage'
 
+export default {
+  data () {
+    return {
+      title: '班级投票'
+    }
+  },
+  components: {
+    FuncPage
+  }
+}
 </script>
 <style scoped>
+
 </style>

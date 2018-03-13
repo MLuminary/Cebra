@@ -1,13 +1,26 @@
-<!-- 喇叭 -->
+<!-- 开销 -->
 <template>
-  <div>
-    喇叭
-  </div>
+  <func-page :title="title">
+    <div>
+      喇叭
+    </div>
+  </func-page>
 </template>
 
 <script>
-export default {}
+import FuncPage from 'base/funcPage/funcPage'
 
+export default {
+  data () {
+    return {
+      title: '班级喇叭'
+    }
+  },
+  components: {
+    FuncPage
+  }
+}
 </script>
 <style scoped>
+
 </style>

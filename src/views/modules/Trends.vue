@@ -1,13 +1,26 @@
-<!-- 动态 -->
+<!-- 开销 -->
 <template>
-  <div>
-    动态
-  </div>
+  <func-page :title="title">
+    <div>
+      动态
+    </div>
+  </func-page>
 </template>
 
 <script>
-export default {}
+import FuncPage from 'base/funcPage/funcPage'
 
+export default {
+  data () {
+    return {
+      title: '班级动态'
+    }
+  },
+  components: {
+    FuncPage
+  }
+}
 </script>
 <style scoped>
+
 </style>

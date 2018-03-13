@@ -1,13 +1,26 @@
-<!-- 日程 -->
+<!-- 开销 -->
 <template>
-  <div>
-    日程
-  </div>
+  <func-page :title="title">
+    <div>
+      日程
+    </div>
+  </func-page>
 </template>
 
 <script>
-export default {}
+import FuncPage from 'base/funcPage/funcPage'
 
+export default {
+  data () {
+    return {
+      title: '班级日程'
+    }
+  },
+  components: {
+    FuncPage
+  }
+}
 </script>
 <style scoped>
+
 </style>
