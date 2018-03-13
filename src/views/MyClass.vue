@@ -1,7 +1,6 @@
 <!-- 我的班级 -->
 <template>
   <div>
-    我的班级
   </div>
 </template>
 
