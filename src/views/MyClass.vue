@@ -1,6 +1,7 @@
 <!-- 我的班级 -->
 <template>
   <div class="myclass">
+    <class-info></class-info>
     <router-view class="view"></router-view>
     <palette/>
   </div>
@@ -8,19 +9,21 @@
 
 <script>
 import Palette from 'components/palette/palette'
+import ClassInfo from 'components/classInfo/classInfo'
 
 export default {
   components: {
-    Palette
+    Palette,
+    ClassInfo
   }
 }
 </script>
 
 <style lang="stylus" scoped>
 .myclass {
-  display flex
-  justify-content center
+  padding: 4%;
 }
+
 .view {
   position: absolute;
   top: $HEADER_HEIGHT;
