@@ -1,3 +1,4 @@
+<!-- 主文件 -->
 <template>
   <div>
     <router-view class="view"></router-view>
