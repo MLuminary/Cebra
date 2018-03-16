@@ -23,6 +23,7 @@ export default {
   height: $HEADER_HEIGHT;
   text-align: center;
   z-index: 100;
+  box-shadow: $box-shadow-value
 
   .back-btn {
     position: absolute;
