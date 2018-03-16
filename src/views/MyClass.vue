@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import Palette from 'components/palette/palette'
-import ClassInfo from 'components/classInfo/classInfo'
+import Palette from 'components/MyClass/palette/palette'
+import ClassInfo from 'components/MyClass/classInfo/classInfo'
 
 export default {
   components: {
