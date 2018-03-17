@@ -14,6 +14,8 @@ import Tyfon from 'views/modules/Tyfon'
 import Timetable from 'views/modules/Timetable'
 import Ipa from 'views/modules/Ipa'
 
+import AddItem from 'components/Spending/addItem'
+
 Vue.use(Router)
 
 export default new Router({
@@ -29,7 +31,13 @@ export default new Router({
       children: [
         {
           path: 'spending',
-          component: Spending
+          component: Spending,
+          children: [
+            {
+              path: 'additem',
+              component: AddItem
+            }
+          ]
         },
         {
           path: 'material',

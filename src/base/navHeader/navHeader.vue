@@ -20,9 +20,13 @@ export default {
 @import '~common/stylus/variable';
 
 .nav-header {
+  position fixed
+  left 0
+  right 0
   height: $HEADER_HEIGHT;
   text-align: center;
   z-index: 100;
+  background $color-background
 
   .back-btn {
     position: absolute;
