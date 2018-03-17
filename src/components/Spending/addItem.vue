@@ -2,24 +2,27 @@
   <func-page :title="title">
     <div class="container">
       <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="60px" class="demo-ruleForm">
-        <el-form-item label="名称" prop="name">
-          <el-input v-model="ruleForm.name"></el-input>
+        <el-form-item label="名称" prop="title">
+          <el-input v-model="ruleForm.title"></el-input>
         </el-form-item>
         <el-form-item label="时间" required>
-          <el-col :span="13">
+          <el-col :span="15">
             <el-form-item prop="date">
-              <el-date-picker type="date" placeholder="选择日期" v-model="ruleForm.date" style="width: 100%;"></el-date-picker>
+              <el-date-picker type="date" placeholder="选择日期" v-model="ruleForm.date" style="width: 100%;" value-format="yyyy-MM-dd"></el-date-picker>
             </el-form-item>
           </el-col>
         </el-form-item>
-        <el-form-item label="方式" prop="way">
-          <el-radio-group v-model="ruleForm.way">
-            <el-radio label="支出"></el-radio>
-            <el-radio label="收入"></el-radio>
+        <el-form-item label="方式" prop="isPay">
+          <el-radio-group v-model="ruleForm.isPay">
+            <el-radio label="pay">支出</el-radio>
+            <el-radio label="get">收入</el-radio>
           </el-radio-group>
         </el-form-item>
-        <el-form-item label="简介" prop="desc">
-          <el-input type="textarea" v-model="ruleForm.desc"></el-input>
+         <el-form-item label="金额" prop="pay">
+          <el-input v-model.number="ruleForm.pay"></el-input>
+        </el-form-item>
+        <el-form-item label="简介" prop="info">
+          <el-input type="textarea" v-model="ruleForm.info"></el-input>
         </el-form-item>
         <el-form-item>
           <el-button type="primary" @click="submitForm('ruleForm')">确认</el-button>
@@ -38,24 +41,29 @@ export default {
     return {
       title: '添加账单',
       ruleForm: {
-        name: '',
-        date: '',
-        way: '',
-        desc: ''
+        title: '',
+        info: '',
+        pay: 0,
+        isPay: '',
+        date: ''
       },
       rules: {
-        name: [
+        title: [
           { required: true, message: '请输入活动名称', trigger: 'blur' },
-          { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
+          { min: 1, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
         ],
         date: [
-          { type: 'date', required: true, message: '请选择日期', trigger: 'change' }
+          { required: true, message: '请选择日期', trigger: 'change' }
         ],
-        way: [
+        isPay: [
           { required: true, message: '请选择方式', trigger: 'change' }
         ],
-        desc: [
-          { required: true, message: '请填写活动简介', trigger: 'blur' }
+        info: [
+          { message: '请填写活动简介', trigger: 'blur' },
+          {min: 3, max: 15, message: '长度在 3 到 15 个字符', trigger: 'blur'}
+        ],
+        pay: [
+          {required: true, message: '请选择金额', trigger: 'blur'}
         ]
       }
     }
@@ -67,9 +75,9 @@ export default {
     submitForm (formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          alert('submit!')
+          this.$emit('getItems', this.ruleForm)
+          this.$router.back()
         } else {
-          console.log('error submit!!')
           return false
         }
       })

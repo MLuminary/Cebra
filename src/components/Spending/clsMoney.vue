@@ -7,10 +7,9 @@
 
 <script>
 export default {
+  props: ['totalMoney'],
   data () {
-    return {
-      totalMoney: 2627.15
-    }
+    return {}
   }
 }
 </script>

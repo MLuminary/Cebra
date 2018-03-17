@@ -7,7 +7,7 @@
       {{items.info}}
     </p>
     <p class="item-pay">
-      <span>{{items.isPay?ispay[1]:ispay[0]}}</span>
+      <span>{{items.isPay === 'pay'?ispay[1]:ispay[0]}}</span>
       <span>{{items.pay}}</span>
     </p>
     <p class="item-bal">
