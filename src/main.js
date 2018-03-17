@@ -5,7 +5,8 @@ import router from './router'
 import fastclick from 'fastclick'
 import ElementUI from 'element-ui'
 import 'common/stylus/index.styl'
-import 'element-ui/lib/theme-chalk/index.css'
+// import 'element-ui/lib/theme-chalk/index.css'
+import './../theme/index.css'
 
 Vue.config.develtools = true
 Vue.config.productionTip = false
